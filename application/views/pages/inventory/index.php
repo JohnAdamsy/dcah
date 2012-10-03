@@ -245,7 +245,12 @@ $affiliation=$this -> session -> userdata('affiliation');*/
 							</section--><!-- End of Menu-Container -->
 									
 									
-												
+							<section class="form-container-menu">
+								<ul>
+									<li><a class="awesome blue large">Zinc & ORS Inventory Status</a></li>
+									<li><a class="awesome blue large">MNH & Child Health Assessment</a></li>
+								</ul>
+							</section>					
 							<section class="form-container">
 								<?php
 								//echo 'facility '.$sessionMFC;
