@@ -88,8 +88,10 @@ $().ready(function(){
 			facilityTelephone:{required:true},
 			facilityAltTelephone:{required:true},
 			facilityEmail:{required: true,email:true},
+
 			'sterileGloveSizes[]':{required:true},
 			'q6bSkilledProviders[]':{required:true,},
+
 			ortDehydrationLocation:{minlength:1}
 		},
 		messages: {
@@ -104,8 +106,10 @@ $().ready(function(){
 			facilityTelephone:{required:"*Required"},
 			facilityAltTelephone:{required:"*Required"},
 			facilityEmail:{required: "*Required",email:"Not a valid email. Valid example: facility_name@dcah.or.ke"},
+
 			'sterileGloveSizes[]':{required:"Select at least 1 type of size"},
 			'q6bSkilledProviders[]':{required:"Select at least 1 skilled provider"},
+
 			ortDehydrationLocation:{minlength:"*Required"}
 		}
 	}); /*end of form_mnh_assessment*/

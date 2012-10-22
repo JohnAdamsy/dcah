@@ -32,6 +32,7 @@ class C_Front extends CI_Controller {
 		$data['status']="";
 		$data['response']="";
 		$data['form'] = '
+
 						<h3>Form Guide</h3>
 						
 						<ol start="1" type="1|a|A|i|I">
@@ -104,6 +105,7 @@ class C_Front extends CI_Controller {
 							</ol>
 						
 						</ol>';
+
 		$data['form_id']='';
 		$this -> load -> view('pages/inventory/index', $data);
 		}else{
