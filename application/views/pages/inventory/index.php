@@ -48,6 +48,8 @@ $mfCode = $this -> session -> userdata('fCode');
 					$('.form-instructions.c').hide();
 
 				});
+				
+				
 
 			});
 			/*end of doc ready*/
@@ -311,9 +313,9 @@ $mfCode = $this -> session -> userdata('fCode');
 				<section class="form-container-menu">
 					<ul>
 
-						<li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1.4em">Child Health Commodity Assessment</a></li>
+						<li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Child Health Commodity Assessment</a></li>
 
-						<li><a id="mnh_inventory_li" class="awesome blue large" style="font-size:1.4em">Maternal and New-born Health Assessment</a></li>
+						<li><a id="mnh_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Maternal and New-born Health Assessment</a></li>
 					</ul>
 				</section>					
 				<section class="form-container ui-widget">

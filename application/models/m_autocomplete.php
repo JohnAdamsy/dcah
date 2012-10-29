@@ -52,6 +52,9 @@ class M_Autocomplete extends MY_Model {
         return $this->formRecords;
 	}
 	
+	public function setMFLCode(){
+		
+	}
 	
 	
 }//end of class M_Autocomplete 

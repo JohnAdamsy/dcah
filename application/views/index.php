@@ -58,6 +58,11 @@
 		
 				});
 				
+				$('a').mouseup(function (){
+					alert ('changed');
+					
+				});
+				
 			});
 		
 		</script>

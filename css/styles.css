@@ -925,7 +925,7 @@ div.slider-nav span.left {
 	width: 75%;
 	height: 700px;
 	overflow: auto;
-	padding: 5px 5px 5px 5px;
+	padding: 2%;
 	margin-left: 2%;
 	margin-top: 10px;
 	border: 2px solid #CCC;
@@ -1441,8 +1441,6 @@ form input, form textarea {
 }
 .row, .row2 {
 	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 .row-title {
 	width: 100%;
@@ -1489,7 +1487,7 @@ form input, form textarea {
 }
 .column-wide .center {
 	width: 30%;
-	border-right:1px solid gray;
+	border-right:2px solid gray;
 	padding:1%;
 }
 

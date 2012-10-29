@@ -11,6 +11,7 @@ class  MY_Controller  extends  CI_Controller {
 		parent::__construct();
 
 		/* Instantiate Doctrine's Entity manage so we don't have
+
 		   to everytime we want to use Doctrine */
 		   
 		$this->em = $this->doctrine->em;
@@ -19,12 +20,14 @@ class  MY_Controller  extends  CI_Controller {
 		$this->getCountyNames();$this->getDisctrictNames();$this->getFacilityLevels();
 		$this->getFacilityTypes();$this->getFacilityOwners();$this->getProvinceNames();
 
+
 	}
 
 	function getRepositoryByFormName($form) {
 		$this -> the_form = $this -> em -> getRepository($form);
 		return $this -> theForm;
 	}
+
 	
 	public function getProvinceNames(){/*obtained from the session data*/
 			  if($this -> session -> userdata('allProvinces') )
@@ -37,6 +40,7 @@ class  MY_Controller  extends  CI_Controller {
 				return $this->selectProvince;
 			
 		}
+
 	
 	public function getDisctrictNames(){/*obtained from the session data*/
 			  if($this -> session -> userdata('allDistricts') )
@@ -76,7 +80,9 @@ class  MY_Controller  extends  CI_Controller {
 
 	public function getFacilityLevels(){/*obtained from the session data*/
 			  if($this -> session -> userdata('allFacilityLevels'))
+
 			// print var_dump($this -> session -> userdata('allFacilityLevels'));exit;
+
 			foreach ($this -> session -> userdata('allFacilityLevels') as $key => $value) {
 				$this -> selectFacilityLevel .= '<option value="' . $value['facilityLevelID'] . '">' . $value['facilityLevel'] . '</option>' . '<br />';
 			}
