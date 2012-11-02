@@ -1242,6 +1242,46 @@ function log() {
 			    }
 		       });  
 				/*-----------------------------------end of hide/display OTR location field---------------------------------------------------*/
+				$('.form-instructions.a').hide();
+				$('.form-instructions.c').hide();
+				$('.form-instructions.m').hide();
+				
+				
+				$('.form-link.a').click(function() {
+
+					$('.form-instructions.a').show();
+					$('.form-instructions.c').hide();
+					$('.form-instructions.m').hide();
+
+				});
+
+
+				$('.form-link.c').click(function() {
+
+					$('.form-instructions.c').show();
+					$('.form-instructions.m').hide();
+					$('.form-instructions.a').hide();
+
+				});
+
+				$('.form-link.m').click(function() {
+
+					$('.form-instructions.m').show();
+					$('.form-instructions.c').hide();
+					$('.form-instructions.a').hide();
+
+				});
+				
+				var method;
+				
+				$('#sterilizationMethod').change(function(){
+					alert('Fire');
+					method=$('#sterilizationMethod').val();
+					if(method="Other(specify)"){
+						$("#sterilizationMethodOther").show();
+					}
+					
+				});
 				
 				/*-----------------------------------start of hide/display  stock item if not available---------------------------------------*/
 				if(form_id=="#zinc_ors_inventory"){

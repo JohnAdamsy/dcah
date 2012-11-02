@@ -87,11 +87,7 @@
 					<input  name="username" id="username" type="text" placeholder="Facility Name" required/>
 				</div>
 				<p></p>
-				<section class="confirm">
-
-					Facility MFL Code
-
-				</section>
+				
 				<button type="submit" class="awesome myblue large" formaction="<?php echo base_url().'c_auth/go'?>" />
 				Continue</button>
 			</form>

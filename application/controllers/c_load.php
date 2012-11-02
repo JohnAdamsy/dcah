@@ -75,133 +75,7 @@ class C_Load extends MY_Controller {
 	<h3 align="center"> CHILD HEALTH COMMODITIES ASSESSMENT</h3>
 
 	
-	<section class="block">
-		<section class="column">
-			<section class="row-title">
-				Facility Information
-			</section>
-			<!--section class="row2">
-				<section class="left">
-					<label>Date:</label>
-				</section>
-				<section class="right">
-					<input type="date" name="facilityDateOfInventory" id="facilityDateOfInventory" readonly="readonly" class="autoDate" placeholder="click for date"/>
-				</section>
-			</section -->
-			<section class="row2">
-				<section class="left">
-					<label>Facility Name:</label>
-				</section>
-				<section class="right">
-					<input type="text" name="facilityName" id="facilityName"/>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Facility Type:</label>
-				</section>
-				<section class="right">
-					<select name="facilityType" id="facilityType" class="cloned">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectFacilityType . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Facility Level:</label>
-				</section>
-				<section class="right">
-					<select name="facilityLevel" id="facilityLevel" class="cloned">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectFacilityLevel . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-		 <label>Owned By:</label>
-				</section>
-				<section class="right">
-					<select name="facilityOwner" id="facilityOwner" class="cloned">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectFacilityOwner . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Province:</label>
-				</section>
-				<section class="right">
-					<select name="facilityProvince" id="facilityProvince" class="cloned">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectProvince . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>District:</label>
-				</section>
-				<section class="right">
-					<select name="facilityDistrict" id="facilityDistrict">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectDistricts . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>County:</label>
-				</section>
-				<section class="right">
-					<select name="facilityCounty" id="facilityCounty">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectCounties . '
-					</select>
-				</section>
-			</section>
-
-		</section>
-		<section class="column" style="margin-bottom:30px">
-			
-			
-			<section class="row-title">
-				Contact Information
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Facility-In-Charge Contact:</label>
-				</section>
-				<section class="right">
-					<input type="text" name="facilityContactPerson" id="facilityContactPerson"/>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Telephone Contact(s):</label>
-				</section>
-				<section class="right">
-
-					<label>Cell 1:</label>
-					<input type="text" name="facilityTelephone" id="facilityTelephone" maxlength="14"/>
-				
-					<label>Cell 2:</label>
-					<input type="text" name="facilityAltTelephone" id="facilityAltTelephone" maxlength="14"/>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Email:</label>
-				</section>
-				<section class="right">
-					<input type="email" name="facilityEmail" id="facilityEmail" maxlength="90"/>
-					<input type="hidden"  name="facilityMFC" id="facilityMFC"/>
-				</section>
-			</section>
-		</section>
-	</section>
+	
 	
 
 	<h3 align="center"> Commodities Assessment </h3>
@@ -2161,137 +2035,6 @@ class C_Load extends MY_Controller {
 	<h3 align="center"> ASSESSMENT OF EQUIPMENT AND SUPPLIES FOR EmONC</h3>
 
 	<section class="block">
-		<section class="column">
-			<section class="row-title">
-				Facility Information
-			</section>
-			<!--section class="row2">
-			<section class="left">
-					<label>Date:</label>
-				</section>
-				<section class="right">
-					<input type="date" name="facilityDateOfInventory" id="facilityDateOfInventory" readonly="readonly" class="autoDate" placeholder="click for date"/>
-				</section>
-
-			</section-->
-
-			<section class="row2">
-				<section class="left">
-					<label>Facility Name:</label>
-				</section>
-				<section class="right">
-					<input type="text" name="facilityName" id="facilityName"/>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Facility Type:</label>
-				</section>
-				<section class="right">
-					<select name="facilityType" id="facilityType">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectFacilityType . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Facility Level:</label>
-				</section>
-				<section class="right">
-					<select name="facilityLevel" id="facilityLevel">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectFacilityLevel . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-		<label>Owned By:</label>
-				</section>
-				<section class="right">
-					<select name="facilityOwner" id="facilityOwner">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectFacilityOwner . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Province:</label>
-				</section>
-				<section class="right">
-					<select name="facilityProvince" id="facilityProvince">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectProvince . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-
-					<label>District:</label>
-				</section>
-				<section class="right">
-					<select name="facilityDistrict" id="facilityDistrict">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectDistricts . '
-					</select>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>County:</label>
-				</section>
-				<section class="right">
-					<select name="facilityCounty" id="facilityCounty">
-						<option value="" selected="selected">Select One</option>
-						' . $this -> selectCounties . '
-					</select>
-				</section>
-			</section>
-
-		</section>
-		<section class="column" style="margin-bottom:30px">
-			<section class="row-title">
-				Contact Information
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Facility-In-Charge Contact:</label>
-				</section>
-				<section class="right">
-					<input type="text" name="facilityContactPerson" id="facilityContactPerson"/>
-				</section>
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Telephone Contact(s):</label>
-				</section>
-				<section class="right">
-
-					<label>Cell 1:</label>
-					<input type="text" name="facilityTelephone" id="facilityTelephone" maxlength="14"/>
-				
-
-					<label>Cell 2:</label>
-					<input type="text" name="facilityAltTelephone" id="facilityAltTelephone" maxlength="14"/>
-				</section>
-
-			</section>
-			<section class="row2">
-				<section class="left">
-					<label>Email:</label>
-				</section>
-				<section class="right">
-					<input type="email" name="facilityEmail" id="facilityEmail" maxlength="90"/>
-					<input type="hidden"  name="facilityMFC" id="facilityMFC"/>
-				</section>
-			</section>
-		</section>
-	</section>
-
-	<section class="block">
 		<section class="column-wide">
 			<section class="row-title">
 				<section class="left">
@@ -2300,8 +2043,25 @@ class C_Load extends MY_Controller {
 				<section class="center">
 					<label class="dcah-label">ANSWER</label>
 				</section>
-				<section class="right">
-					<label class="dcah-label">COMMENTS (On Why NOT)</label>
+
+			</section>
+			
+			<section class="row">
+				<section class="left">
+					4. Does the facility provide for delivery services?
+				</section>
+				<section class="center cloned" >
+
+					<select name="lndq4FacilityDelivery" id="lndq4FacilityDelivery" class="cloned left-combo">
+						<option value="" selected="selected">Select One</option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+				</section>
+				
+				<section id="q4comm" class="right" style="display: none">
+					<input type="text" name="lndq4Comment" id="lndq4Comment" class="cloned"/>
+
 				</section>
 
 			</section>
@@ -3301,17 +3061,17 @@ class C_Load extends MY_Controller {
 									</section>
 									
 									<section class="center">
-										Sterilization Methods
 										<select name="sterilizationMethod" id="sterilizationMethod" class="cloned">
 
 											<option selected="selected" value="">Select One</option>
 											<option>Autoclave</option>
 											<option>HLD</option>
+											<option>Other(specify)</option>
 
 										</select>
-										Others(specify)
+										
 
-										<input type="text" name="sterilizationMethodOther" id="sterilizationMethodOther"/>
+										<input type="text" style="display:none" name="sterilizationMethodOther" id="sterilizationMethodOther"/>
 
 									</section>
 								</section>
@@ -3560,7 +3320,7 @@ class C_Load extends MY_Controller {
 										<label class="dcah-label">12. Medications in the Maternity/Labour ward</label>
 									</section>
 									<section class="center">
-										<label class="dcah-label">Availability</label>
+										<label class="dcah-label" style="float:left;width:45%">Availability</label>
 										<label class="dcah-label" style="float:right;width:45%">Quantity</label>
 									</section>
 
@@ -3690,12 +3450,7 @@ class C_Load extends MY_Controller {
 											<option>Sometimes Available</option>
 											<option>Never Available</option>
 										</select>
-										<select class="cloned left-combo" name="q12dInjectableHydralazineb_43" id="q12dInjectableHydralazineb_43">
-
-											<option value="Injectable Hydralazine">Hydralazine</option>
-											<option value="Injectable Apresoline">Apresoline</option>
-
-										</select>
+										
 										<input type="number" class="cloned fromZero" name="q12dNumber_43" id="q12dNumber_43" min="0"/>
 									</section>
 
@@ -4865,4 +4620,342 @@ class C_Load extends MY_Controller {
 
 	}
 
+	public function instructions() {
+		$instructions = '';
+		$instructions.= '
+<h3>Form Guide</h3>
+
+<ol start="1" type="1|a|A|i|I">
+	<li>
+		Please click on one of the two forms below for instructions
+	</li>
+	<ol start="a">
+		<li class="form-link a">
+			MNCH Commodity Assessment Tool Instructions
+		</li>
+		<section class="form-instructions a">
+			<ol>
+				<li>
+					Instructions for the User page
+				</li>
+				<ol>
+					<li>
+						Upload the  signed letter by the Head of the two divisions- I will send you a soft copy of this
+					</li>
+					<li>
+						Section the instructions as per the following
+					</li>
+				</ol>
+				<li>
+					Start
+				</li>
+				<ol>
+					<li>
+						To begin with the data entry, type in the name of the facility you are entering data for. Select the correct facility from the list that the system will provide.
+					</li>
+					<li>
+						The system will upload the Master Facility Code (MFL) for the facility you have selected automatically. Confirm if this is your MFL code. If it is not, ensure that the facility name you have selected is the correct one.
+					</li>
+				</ol>
+				<li>
+					Facility Registration
+				</li>
+				<ol>
+					<li>
+						Once you entered the facility name, the facility registration page will load.
+					</li>
+					<li>
+						The system will automatically upload the following information:  facility type, level of care, ownership/management, and district, county. If this information is not uploaded automatically, complete with the correct information.
+					</li>
+					<li>
+						Complete the facility-in-charge information section with the following: name, telephone contact & email contact
+					</li>
+				</ol>
+
+				<li>
+					Assessment Tools Page
+				</li>
+				<ol>
+					<li>
+						The MNCH tools should be completed one at a time. You cannot move to the next tool without fully completing the first one.
+					</li>
+					<li>
+						The system will load on two tabs at the top
+					</li>
+					<li>
+						Child Health Commodities, Supplies & Equipment Assessment
+					</li>
+					<li>
+						Maternal and Newborn health commodities, supplies & equipment assessment
+					</li>
+					<li>
+						The two tools should be completed by ALL facilities.
+					</li>
+					<li>
+						Select the assessment tool you would like to begin with then when done move to the next one.
+					</li>
+				</ol>
+			</ol>
+		</section>
+		<li class="form-link c">
+			Child Assessment Form
+		</li>
+		<section class="form-instructions c" >
+			<ol>
+				<li>
+					The assessment will focus on the following:
+				</li>
+				<ol>
+					<li>
+						Commodities: Zinc sulphate 20mg, low –Osmolarity oral rehydration salts (ORS), Ciprofloxacin, and Metronidazole
+					</li>
+					<li>
+						Supplies & Equipment:  Supplies and equipment available at the oral rehydration therapy corners in the facility
+					</li>
+				</ol>
+				<li>
+					The tool has 6 tabs from which data on the commodities should be collected from.
+					These are points where children are managed or where the commodities are stored and which might have stocks.
+				</li>
+				<li>
+					Please note you cannot proceed to the next tab, the next section or the next form without fully
+					completing all the section in the 6 tabs.  Where stocks are not available, indicate zero (o) quantities and proceed to the next step.
+				</li>
+				<li>
+					In the case of the options, there are two possible scenarios (YES or NO).
+				</li>
+
+				<ol>
+					<li>
+						If YES
+					</li>
+					<ol>
+						<li>
+							All dependent fields remain active or selectable.
+						</li>
+					</ol>
+					<li>
+						If NO
+					</li>
+					<ol>
+						<li>
+							All dependent fields become inactive or unselectable.
+						</li>
+					</ol>
+				</ol>
+
+			</ol>
+		</section>
+		<li class="form-link m">
+			Maternal & New-Born Health Assessment
+		</li>
+		<section class="form-instructions m" >
+			<ol>
+				<li>
+					The assessment will focus on the following:
+				</li>
+				<ol>
+					<li>
+						Basic emergency obstetric and new born care commodities, supplies & equipment
+					</li>
+					<li>
+						Some sections of the tool will
+						have a provision for definite answers- YES/NO – these will limit you to choose only one response
+					</li>
+					<li>
+						Some sections in the tool may allow for multiple sections.
+					</li>
+				</ol>
+				<li>
+					The <b><em>Facility Details</em></b> are pre-filled.
+				</li>
+				<li>
+					Please fill the Facility Contact details.
+				</li>
+				<li>
+					In the case of the options, there are two possible scenarios (YES or NO).
+				</li>
+
+				<ol>
+					<li>
+						If YES
+					</li>
+					<ol>
+						<li>
+							All dependent fields remain active or selectable.
+						</li>
+					</ol>
+					<li>
+						If NO
+					</li>
+					<ol>
+						<li>
+							All dependent fields become inactive or unselectable.
+						</li>
+					</ol>
+				</ol>
+
+			</ol>
+		</section>
+	</ol>
+
+</ol>
+
+
+
+';
+						
+						$data['form'] = $instructions;
+		$data['form_id'] = 'instructions';
+
+		$this -> load -> view('form', $data);
+		}
+		
+		public function facility_registration() {
+		$facility_registration = '';
+		$facility_registration.= '
+		<form name="facility_registration" id="facility_registration" method="POST" action="' . base_url() . 'submit/c_form/form_mnh_equipment_assessment' . '" >
+		
+		<h3 align="center">FACILITY REGISTRATION</h3>
+
+	<section class="block">
+		<section class="column">
+			<section class="row-title">
+				Facility Information
+			</section>
+			<!--section class="row2">
+			<section class="left">
+					<label>Date:</label>
+				</section>
+				<section class="right">
+					<input type="date" name="facilityDateOfInventory" id="facilityDateOfInventory" readonly="readonly" class="autoDate" placeholder="click for date"/>
+				</section>
+
+			</section-->
+
+			<section class="row2">
+				<section class="left">
+					<label>Facility Name:</label>
+				</section>
+				<section class="right">
+					<input type="text" name="facilityName" id="facilityName"/>
+				</section>
+			</section>
+			<section class="row2">
+				<section class="left">
+					<label>Facility Type:</label>
+				</section>
+				<section class="right">
+					<select name="facilityType" id="facilityType">
+						<option value="" selected="selected">Select One</option>
+						' . $this -> selectFacilityType . '
+					</select>
+				</section>
+			</section>
+			<section class="row2">
+				<section class="left">
+					<label>Facility Level:</label>
+				</section>
+				<section class="right">
+					<select name="facilityLevel" id="facilityLevel">
+						<option value="" selected="selected">Select One</option>
+						' . $this -> selectFacilityLevel . '
+					</select>
+				</section>
+			</section>
+			<section class="row2">
+				<section class="left">
+		<label>Owned By:</label>
+				</section>
+				<section class="right">
+					<select name="facilityOwner" id="facilityOwner">
+						<option value="" selected="selected">Select One</option>
+						' . $this -> selectFacilityOwner . '
+					</select>
+				</section>
+			</section>
+			<section class="row2">
+				<section class="left">
+					<label>Province:</label>
+				</section>
+				<section class="right">
+					<select name="facilityProvince" id="facilityProvince">
+						<option value="" selected="selected">Select One</option>
+						' . $this -> selectProvince . '
+					</select>
+				</section>
+			</section>
+			<section class="row2">
+				<section class="left">
+
+					<label>District:</label>
+				</section>
+				<section class="right">
+					<select name="facilityDistrict" id="facilityDistrict">
+						<option value="" selected="selected">Select One</option>
+						' . $this -> selectDistricts . '
+					</select>
+				</section>
+			</section>
+			<section class="row2">
+				<section class="left">
+					<label>County:</label>
+				</section>
+				<section class="right">
+					<select name="facilityCounty" id="facilityCounty">
+						<option value="" selected="selected">Select One</option>
+						' . $this -> selectCounties . '
+					</select>
+				</section>
+			</section>
+
+		</section>
+		<section class="column" style="margin-bottom:30px">
+			<section class="row-title">
+				Contact Information
+			</section>
+			<section class="row2">
+				<section class="left">
+					<label>Facility-In-Charge Contact Name:</label>
+				</section>
+				<section class="right">
+					<input type="text" name="facilityContactPerson" id="facilityContactPerson"/>
+				</section>
+			</section>
+			<section class="row2">
+				<section class="left">
+					<label>Telephone Contact(s):</label>
+				</section>
+				<section class="right">
+
+					<label>Cell 1:</label>
+					<input type="text" name="facilityTelephone" id="facilityTelephone" maxlength="14"/>
+				
+
+					<label>Cell 2:</label>
+					<input type="text" name="facilityAltTelephone" id="facilityAltTelephone" maxlength="14"/>
+				</section>
+
+			</section>
+			<section class="row2">
+				<section class="left">
+					<label>Email:</label>
+				</section>
+				<section class="right">
+					<input type="email" name="facilityEmail" id="facilityEmail" maxlength="90"/>
+					<input type="hidden"  name="facilityMFC" id="facilityMFC"/>
+				</section>
+			</section>
+		</section>
+	</section>
+	
+		</form>
+		';
+		
+			$data['form'] = $facility_registration;
+		$data['form_id'] = 'facility_registration';
+
+		$this -> load -> view('form', $data);
+		
+		}
 }

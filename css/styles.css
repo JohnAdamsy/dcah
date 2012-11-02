@@ -911,7 +911,7 @@ div.slider-nav span.left {
  * */
 @import url('fonts.css');
 .form-container-menu {
-	width: 60%;
+	width: 90%;
 	height: 5%;
 	margin: auto;
 	
@@ -952,6 +952,7 @@ div.slider-nav span.left {
 .form-link{
 	cursor:pointer; 
 	display:block;
+	color: #039;
 	
 }
 .form-link li{
@@ -959,7 +960,7 @@ div.slider-nav span.left {
 }
 .form-link:hover {
 	cursor:hand;
-	color: #039;
+	
 	
 }
 .form-instructions{

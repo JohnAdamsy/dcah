@@ -33,7 +33,8 @@ $mfCode = $this -> session -> userdata('fCode');
 					$("#profile-fancy").removeClass("show");
 					return false;
 				});
-				$('.form-instructions.c').hide();
+			
+					$('.form-instructions.c').hide();
 				$('.form-instructions.m').hide();
 				$('.form-link.c').click(function() {
 
@@ -192,10 +193,18 @@ $mfCode = $this -> session -> userdata('fCode');
 						linkDomain='c_load';
 						linkIdUrl='form_mnh_equipment_assessment';
 						break;
+						case "#facility_registration_li":
+						linkDomain='c_load';
+						linkIdUrl='facility_registration';
+						break;
 						case "#zinc_inventory_li":
 						linkDomain='c_load';
 						linkIdUrl='form_zinc_ors_inventory';
 						break;
+						case "#instructions_li":
+	                    linkDomain='c_load';
+	                    linkIdUrl='instructions';
+	                    break;
 						}/*close the case*/
 						if(linkDomain)
 						//+linkDomain+'/'+linkIdUrl
@@ -312,6 +321,10 @@ $mfCode = $this -> session -> userdata('fCode');
 									
 				<section class="form-container-menu">
 					<ul>
+						
+						<li><a id="instructions_li" class="awesome blue large" style="font-size:1em;display:inline-block">Instructions</a></li>
+						
+						<li><a id="facility_registration_li" class="awesome blue large" style="font-size:1em;display:inline-block">Facility Registration</a></li>
 
 						<li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Child Health Commodity Assessment</a></li>
 
