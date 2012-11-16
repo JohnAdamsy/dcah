@@ -3887,7 +3887,7 @@ class C_Load extends MY_Controller {
 				</ol>
 
 			</ol>
-			<li>Click link -> <a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Child Health Commodity Assessment</a></li>
+			<li>Click link -> <a id="dcah_tool_instructions_li" class="awesome blue large" style="font-size:1em;display:inline-block">Child Health Commodity Assessment</a></li>
 		</section>
 		<li class="form-link m">
 			Maternal & New-Born Health Assessment

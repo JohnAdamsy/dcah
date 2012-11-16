@@ -13,6 +13,9 @@ $mfCode = $this -> session -> userdata('fCode');
 		<!-- Attach CSS files -->
 		<link rel="stylesheet" href="<?php echo base_url()?>css/styles.css"/>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="<?php echo base_url()?>js/modernizr-latest.js"></script>
+		
+		
 		<!-- Attach JavaScript files -->
 
 		<!--script src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script-->
@@ -169,7 +172,7 @@ $mfCode = $this -> session -> userdata('fCode');
 						/*----------------------------------------------------------------------------------------------------------------*/
 
 						//so which link was clicked?
-						$('.form-container-menu').find('ul li').on('click',function(){
+						$('.form-container-menu, .form-container').find('ul li').on('click',function(){
 						link_id='#'+$(this).find('a').attr('id');
 						linkSub=$(link_id).attr('class');
 						//alert(linkSub);
