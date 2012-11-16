@@ -34,21 +34,7 @@ $mfCode = $this -> session -> userdata('fCode');
 					return false;
 				});
 			
-					$('.form-instructions.c').hide();
-				$('.form-instructions.m').hide();
-				$('.form-link.c').click(function() {
-
-					$('.form-instructions.c').show();
-					$('.form-instructions.m').hide();
-
-				});
-
-				$('.form-link.m').click(function() {
-
-					$('.form-instructions.m').show();
-					$('.form-instructions.c').hide();
-
-				});
+				
 				
 				
 
@@ -206,6 +192,10 @@ $mfCode = $this -> session -> userdata('fCode');
 	                    linkDomain='c_load';
 	                    linkIdUrl='instructions';
 	                    break;
+	                    case "#ort_li":
+	                    linkDomain='c_load';
+	                    linkIdUrl='form_ort';
+	                    break;
 						}/*close the case*/
 						if(linkDomain)
 						//+linkDomain+'/'+linkIdUrl
@@ -288,9 +278,9 @@ $mfCode = $this -> session -> userdata('fCode');
 		
 		<section class="form-sidebar">
 				<h3>Actions</h3>
-				<section class="buttons">
+				<section class="buttons">					
+				<a title="To clear entire form" id="reset_current_form" class="awesome magenta medium">Save</a>
 				<a title="To Save entered info" id="submit_form_data" class="awesome blue medium">Submit</a>
-				<a title="To clear entire form" id="reset_current_form" class="awesome magenta medium">Reset</a>
 				<a title="To close the form." id="close_opened_form" class="awesome red medium">Close</a></section>
 		</section><!-- End of Form-SideBar -->
 		
@@ -329,6 +319,8 @@ $mfCode = $this -> session -> userdata('fCode');
 						<li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Child Health Commodity Assessment</a></li>
 
 						<li><a id="mnh_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Maternal and New-born Health Assessment</a></li>
+						
+						<li><a id="ort_li" class="awesome blue large" style="font-size:1em;display:inline-block">ORT Corner Assessment</a></li>
 					</ul>
 				</section>					
 				<section class="form-container ui-widget">

@@ -78,9 +78,7 @@
 		</section>
 		<section class="login">
 			<section class="form-title">
-				<section class="title-text">
-					Facility Identification
-				</section>
+				
 			</section>
 			<form id="form-verify" class="form-login" method="post" accept-charset="utf-8">
                  

@@ -1242,35 +1242,7 @@ function log() {
 			    }
 		       });  
 				/*-----------------------------------end of hide/display OTR location field---------------------------------------------------*/
-				$('.form-instructions.a').hide();
-				$('.form-instructions.c').hide();
-				$('.form-instructions.m').hide();
 				
-				
-				$('.form-link.a').click(function() {
-
-					$('.form-instructions.a').show();
-					$('.form-instructions.c').hide();
-					$('.form-instructions.m').hide();
-
-				});
-
-
-				$('.form-link.c').click(function() {
-
-					$('.form-instructions.c').show();
-					$('.form-instructions.m').hide();
-					$('.form-instructions.a').hide();
-
-				});
-
-				$('.form-link.m').click(function() {
-
-					$('.form-instructions.m').show();
-					$('.form-instructions.c').hide();
-					$('.form-instructions.a').hide();
-
-				});
 				
 				
 				//hide/show  input field on Specify(other) selected
@@ -1654,3 +1626,209 @@ function log() {
 				
 });/*end of parent document ready function*/
 /*---------------------------end of global_functions.js------------------------------------------------------------------------------------------------------------------*/
+
+
+$().ready(function(){
+			/**
+			 * variables
+			 */
+			var form_id='';
+			var link_id='';
+			var linkIdUrl='';
+			var linkSub='';
+			var linkDomain='';
+			var visit_site = ''; 
+			var devices='';
+			
+				
+			    //start of close_opened_form click event
+				$("#close_opened_form").click(function() {
+
+				$(".form-container").load('<?php echo base_url() . 'c_front/formviewer'; ?>',function(){
+
+					//delegate events
+					loadGlobalScript();
+
+					});
+					});/*end of close_opened_form click event
+
+					/*----------------------------------------------------------------------------------------------------------------*/
+
+					/*start of loadGlobalJS*/
+					var onload_queue = [];
+					var dom_loaded = false;
+
+					function loadGlobalJS(src, callback) {
+					var script = document.createElement('script');
+					script.type = "text/javascript";
+					script.async = true;
+					script.src = src;
+					script.onload = script.onreadystatechange = function() {
+					if (dom_loaded)
+					callback();
+					else
+					onload_queue.push(callback);
+					// clean up for IE and Opera
+					script.onload = null;
+					script.onreadystatechange = null;
+					};
+					var head = document.getElementsByTagName('head')[0];
+					head.appendChild(script);
+					}/*end of loadGlobalJS*/
+
+					function domLoaded() {
+					dom_loaded = true;
+					var len = onload_queue.length;
+					for (var i = 0; i < len; i++) {
+					onload_queue[i]();
+					}
+					onload_queue = null;
+					};/*end of domLoaded*/
+
+					/*-----------------------------------------------------------------------------------------------------------*/
+
+					//check box/checked radio function was here
+
+					domLoaded();
+
+					/*----------------------------------------------------------------------------------------------------------------*/
+
+					/*submit form event*/
+					/*start of submit_form_data click event*/
+					//function triggerFormSubmit(){
+					$("#submit_form_data").click(function() {
+
+					$("#facilityMFC").val('<?php echo $mfCode; ?>');
+					
+					if(form_id=="#form_mnh_assessment"){
+						$("#q11equipCode_28").val($("#q1_1_equipCode_28").val());
+				
+					}
+
+					$(form_id).submit();
+
+					});//}/*end of submit_form_data click event*/
+
+					/*----------------------------------------------------------------------------------------------------------------*/
+
+					/*reset form event*/
+					/*start of reset_current_form click event*/
+					$("#reset_current_form").click(function() {
+					$(form_id).resetForm();
+
+					});/*end of reset_current_form click event*/
+
+					/*----------------------------------------------------------------------------------------------------------------*/
+					var loaded=false;
+					function loadGlobalScript(){
+					loaded=true;
+
+					var scripts=['<?php echo base_url();?>js/js_ajax_load.js'];
+
+						for(i=0;i<scripts.length;i++){
+						loadGlobalJS(scripts[i],function(){});
+						}
+						form_id='#'+$(".form-container").find('form').attr('id');
+
+						}
+						/*----------------------------------------------------------------------------------------------------------------*/
+
+						//so which link was clicked?
+						$('.form-container-menu').find('ul li').on('click',function(){
+						link_id='#'+$(this).find('a').attr('id');
+						linkSub=$(link_id).attr('class');
+						//alert(linkSub);
+						linkIdUrl=link_id.substr(link_id.indexOf('#')+1,(link_id.indexOf('_li')-1));
+						//load url based on the class and id returned
+						//switch(linkSub){
+						switch(link_id){
+						case "#mnh_inventory_li":
+						linkDomain='c_load';
+						linkIdUrl='form_mnh_equipment_assessment';
+						break;
+						case "#facility_registration_li":
+						linkDomain='c_load';
+						linkIdUrl='facility_registration';
+						break;
+						case "#zinc_inventory_li":
+						linkDomain='c_load';
+						linkIdUrl='form_zinc_ors_inventory';
+						break;
+						case "#instructions_li":
+	                    linkDomain='c_load';
+	                    linkIdUrl='instructions';
+	                    break;
+	                    case "#ort_li":
+	                    linkDomain='c_load';
+	                    linkIdUrl='form_ort';
+	                    break;
+						}/*close the case*/
+						if(linkDomain)
+						//+linkDomain+'/'+linkIdUrl
+
+						$(".form-container").load('<?php echo base_url(); ?>'+linkDomain+'/'+linkIdUrl,function(){
+
+				//delegate events
+				
+				//if(loaded==false)
+				loadGlobalScript();renderFacilityInfo();
+				$( "#tabs" ).tabs();
+				//alert('done');
+				
+				 });
+				
+				})/*end of which link was clicked*/
+				/*----------------------------------------------------------------------------------------------------------------*/
+				
+				//load zinc form on form load
+				
+				/*-----------------------------------------------------------------------------------------------------------------*/
+				/*start of ajax data requests*/
+				function renderFacilityInfo(){
+    			 $.ajax({
+		            type: "GET",
+
+		            	url: "<?php echo base_url()?>c_load/getFacilityDetails",
+						dataType:"json",
+						cache:"true",
+						data:"",
+						success: function(data){
+						var info = data.rData;
+						$.each(info , function(i,facility) {
+						//alert("Name: "+facility.facilityMFC);//render found data
+						$("#facilityName").val(facility.facilityName);
+						$("#facilityContactPerson").val(facility.facilityContactPerson);
+
+  						$("#facilityType option").filter(function() {return $(this).text() == facility.facilityType;}).first().prop("selected", true);
+  						$("#facilityLevel option").filter(function() {return $(this).text() == facility.facilityLevel;}).first().prop("selected", true);
+  						$("#facilityOwner option").filter(function() {return $(this).text() == facility.facilityOwnedBy;}).first().prop("selected", true);
+  						$("#facilityProvince option").filter(function() {return $(this).text() == facility.facilityProvince;}).first().prop("selected", true);
+						$("#facilityDistrict option").filter(function() {return $(this).text() == facility.facilityDistrict;}).first().prop("selected", true);
+						$("#facilityCounty option").filter(function() {return $(this).text() == facility.facilityCounty;}).first().prop("selected", true);
+
+						$("#facilityEmail").val(facility.facilityEmail);
+						
+						/*check if there is more than 1 cell phone no.*/
+						if(facility.facilityTelephone !=''){
+						if(facility.facilityTelephone.indexOf('/')>0){
+							//if tel no >1, split them for display seperately
+							altTel=facility.facilityTelephone.split('/');
+							$("#facilityTelephone").val(altTel[0]);
+							$("#facilityAltTelephone").val(altTel[1]);
+						}else{
+						$("#facilityTelephone").val(facility.facilityTelephone);
+						}
+						}
+						});
+
+						//return false;
+						},
+						beforeSend:function(){},
+						afterSend:function(){}
+						});
+						return false;
+						}
+						/*end of ajax data requests*/
+						/*-----------------------------------------------------------------------------------------------------------------*/
+
+						}); /*close document ready*/

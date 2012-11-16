@@ -910,6 +910,10 @@ div.slider-nav span.left {
  Quicksand Font Family (and variants)
  * */
 @import url('fonts.css');
+.form-nav{
+	width:90%;
+	margin:auto;
+}
 .form-container-menu {
 	width: 90%;
 	height: 5%;

@@ -13,7 +13,7 @@ class C_Front extends CI_Controller {
 	public function index() {
 		if(!$this -> session -> userdata('fCode')){
 			
-		$data['form'] = '<p>Please input your Facility Name.<p>';
+		$data['form'] = '<p>Please type your Facility Name.<p>';
 		$this -> load -> view('index', $data); //landing page
 	    }else{
 			$this->inventory();
@@ -29,6 +29,11 @@ class C_Front extends CI_Controller {
 	public function inventory() {
 		//print 'sess val: '.var_dump($this->session->all_userdata()); die;
 		if($this -> session -> userdata('fCode')){
+			
+		$data['hidden']="display:none";
+		$data['previousForm']="";	
+		$data['nextForm']="facility_registration_li";		
+			
 		$data['status']="";
 		$data['response']="";
 		$data['form'] = '
