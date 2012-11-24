@@ -5,7 +5,7 @@
 	$vehicle=$this -> session -> userdata('vehicle');
 	$affiliation=$this -> session -> userdata('affilitiation');
 	?>
-	<section class="menu salt">
+	<div class="menu salt">
 		<h2>Salt</h2>
 		<div title="click to expand" class="max salt">+</div>
 			<div title="click to minimize" class="min salt" style="display:none">-</div>
@@ -48,9 +48,9 @@
 			</li>
 			<?php } ?>
 		</ul>
-	</section><!-- End of Menu: Salt Forms -->
+	</div><!-- End of Menu: Salt Forms -->
 	
-	<section class="menu oil">
+	<div class="menu oil">
 		<h2>Oil</h2>
 		<div title="click to expand" class="max oil">+</div>
 			<div title="click to minimize" class="min oil" style="display:none">-</div>
@@ -68,9 +68,9 @@
 					<a id="fortifiedOil_C1_li" class="oil-url">Fortified Oil-Table C-1</a>
 			</li>
 		</ul>
-	</section><!-- End of Menu: Oil Forms -->
+	</div><!-- End of Menu: Oil Forms -->
 	
-		<section class="menu sugar">
+		<div class="menu sugar">
 			
 		<h2>Sugar</h2>
 		<div title="click to expand" class="max sugar">+</div>
@@ -122,9 +122,9 @@
 				<a id="qualityAssurance_C1_li" class="sugar-url">Quality Assurance-Table C-1</a>
 			</li>
 		</ul>
-	</section><!-- End of Menu: Sugar Forms -->
+	</div><!-- End of Menu: Sugar Forms -->
 	
-	<section class="menu maize">
+	<div class="menu maize">
 		<h2>Maize</h2>
 		<div title="click to expand" class="max maize">+</div>
 			<div title="click to minimize" class="min maize" style="display:none">-</div>
@@ -153,11 +153,11 @@
 					<a id="externalMaizeFlour_B3_li" class="maize-url">External Fortified Maize-Table B-3</a>
 			</li>
 		</ul>
-	</section><!-- End of Menu: Maize Forms -->
+	</div><!-- End of Menu: Maize Forms -->
 	
 	
 	
-	<section class="menu wheat">
+	<div class="menu wheat">
 		<h2>Wheat</h2>
 		<div title="click to expand" class="max wheat">+</div>
 			<div title="click to minimize" class="min wheat" style="display:none">-</div>
@@ -187,5 +187,5 @@
 				<a id="externalWheatFlour_B3_li" class="wheat-url">External Fortified Wheat-Table B-3</a>
 			</li>
 		</ul>
-	</section><!-- End of Menu: Wheat Forms -->
+	</div><!-- End of Menu: Wheat Forms -->
 	<?php ob_end_flush();?>

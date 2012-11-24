@@ -76,23 +76,23 @@
 	<body>
 		<?php $this->load->view('banner');?>
 
-		<section class="message">
+		<div class="message">
 			<?php echo $form; ?>
-		</section>
-		<section class="login">
-			<section class="form-title">
+		</div>
+		<div class="login">
+			<div class="form-title">
 				
-			</section>
-			<form id="form-verify" class="form-login" method="post" accept-charset="utf-8">
-                 
+			</div>
+			<form id="form-verify" class="form-login" method="post" accept-charset="utf-8" action="<?php echo base_url().'c_auth/go'?>">
+                 <label>Facility Name</label>
                  <div class="ui-widget">
 					<input  name="username" id="username" type="text" placeholder="Facility Name" required/>
 				</div>
 				<p></p>
 				
-				<button type="submit" class="awesome myblue large" formaction="<?php echo base_url().'c_auth/go'?>" />
-				Continue</button>
+				<input type="submit" class="awesome myblue large" value="Continue"/>
+				
 			</form>
-		</section>
+		</div>
 	</body>
 </html>

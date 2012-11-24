@@ -57,7 +57,7 @@ h3 {
 	text-align: center;
 	text-shadow: #666;
 }
-nav {
+nav, div #pageheader {
 	width: 100%;
 	margin-bottom: 20px;
 	padding-top: 10px;
@@ -75,11 +75,17 @@ nav {
 	-webkit-box-shadow: 0px 2px 5px 0.4px #333;
 	box-shadow: 0px 2px 5px 0.4px #333;
 	-moz-box-shadow: 0px 2px 5px 0.4px #333;
+	height:4%;
 }
 .right-side-nav {
+	float: right;
 	display: inline-block;
 	width: 30%;
-	float: right;
+	
+}
+.right-side-nav a{
+	text-decoration:none;
+	color: #FF6666;
 }
 .sessionUser {
 	width:80%;
@@ -101,6 +107,7 @@ nav {
 	font-size: 15px;
 }
 .links {
+	float:left;
 	width: 40%;
 	margin: auto;
 	display: inline-block;
@@ -148,6 +155,7 @@ ul li.last {
 	margin-right: 0;
 }
 .search {
+	float:left;
 	height: 100%;
 	width: 16%;
 	display: inline-block;
@@ -932,13 +940,13 @@ div.slider-nav span.left {
 	
 }
 .form-container {
-	margin-top: -1%;
-	width: 75%;
+	margin:auto;
+	width: 90%;
 	height: 700px;
 	overflow: auto;
 	padding: 2%;
 	margin-left: 2%;
-	margin-top: 10px;
+	margin-top: 3%;
 	border: 2px solid #CCC;
 	-webkit-box-shadow: inset 0px 0px 6px 0px #000;
 	-moz-box-shadow: inset 0px 0px 6px 0px #000;
@@ -1165,6 +1173,7 @@ input.radio {
 	width: 100%;
 	padding-bottom: 10px;
 	border-bottom: 2px solid #999;
+	height:12%;
 }
 /**
  * Logo
@@ -1172,11 +1181,16 @@ input.radio {
 .logo, .credentials {
 	display: inline-block;
 }
+.logo{
+	width:10%;
+	float:left;
+}
 .credentials {
+	float:left;
 	position: absolute;
 	left: 130px;
 	font-family: Verdana;
-	width: 450px;
+	width: 70%;
 }
 .date {
 	float: right;
@@ -1203,6 +1217,7 @@ input.radio {
 	font-weight: bold;
 }
 .message {
+	background:red;
 	background-image: linear-gradient(bottom, rgb(179,43,43) 25%, rgb(194,74,74) 99%);
 	background-image: -o-linear-gradient(bottom, rgb(179,43,43) 25%, rgb(194,74,74) 99%);
 	background-image: -moz-linear-gradient(bottom, rgb(179,43,43) 25%, rgb(194,74,74) 99%);
@@ -1269,7 +1284,7 @@ input.radio {
  Input fields within Login Form
  Attribute => Default
  * */
-.form-login input {
+.form-login input:not([type=submit]) {
 	padding: 10px 10px 10px 10px;
 	width: 100%;
 	border: 1px solid #999;
@@ -1281,7 +1296,7 @@ input.radio {
  Input fields within Login Form
  Attribute => Focus
  * */
-.form-login input:focus {
+.form-login input:not([type=submit]):focus {
 	font-family: Quicksand Bold;
 }
 /*
@@ -1290,13 +1305,13 @@ input.radio {
 .form-login button {
 	font-family: Quicksand;
 }
-form input, form textarea {
+form input:not([type=submit]), form textarea {
 	border: 1px solid #999;
 	outline: none;
 	padding: 5px 5px 5px 5px;
-	margin: 5px 5px 5px 5px;
+	margin: 5px 0 5px 0;
 }
-.form-login input:focus, form input:focus, form textarea:focus {
+.form-login input:not([type=submit]):focus, form input:not([type=submit]):focus, form textarea:focus {
 	-webkit-box-shadow: inset 0px 3px 6px -3px #000;
 	-moz-box-shadow: inset 0px 3px 6px -3px #000;
 	box-shadow: inset 0px 3px 6px -3px #000;
@@ -1408,29 +1423,41 @@ form input, form textarea {
 @import url('fonts.css');
 /* Columns*/
 .column, .column-wide {
-	position: relative;
 	padding: 0 20px 10px 10px;
-	display: inline-block;
-	float: left;
 	height: auto;
-	margin-bottom: 5px;
 }
 .col {
 	width: 33%;
 	display: inline-block;
 }
-.block {
-	border-bottom: 2px solid #999999;
+.block {	
 	margin-bottom: 5px;
+	width:95%;
+	margin:auto;
+	display:block;
+	height:auto;
 }
 .block .column:first-child {
 	border-right: 2px solid #999999;
+}
+.block .column select, .block .column input{
+	width:90%;
+}
+td input[type=number]{
+	float:left;
+}
+.block .column:nth-child(even){
+	float:right;
 }
 .col-x4 {
 	width: 24%;
 }
 .column {
-	width: 45%;
+	width: 47.5%;
+	padding-bottom:2%;
+	display:inline-block;
+	position:relative;
+	
 }
 .column-wide {
 	width: 99%;
@@ -1453,6 +1480,9 @@ form input, form textarea {
 	float: left;
 	display: block;
 	width: 85%;
+}
+.row{
+	margin:0;
 }
 .row, .row2 {
 	width: 100%;
@@ -1477,7 +1507,6 @@ form input, form textarea {
 	clear: all;
 	width: 50%;
 	height: 100%;
-	float: right;
 }
 .left-wide {
 	width: 45%;
@@ -1519,7 +1548,8 @@ form input, form textarea {
 }
 input[type=radio] {
 	display: inline-block;
-	width: 10%;
+	float:right;
+
 }
 input[type=number], select{
 	display:inline-block;
@@ -1527,7 +1557,10 @@ input[type=number], select{
 }
 select{
 	float:left;
-	
+	padding:1px;	
+}
+option{
+	width:100%;
 }
 input[type=number]{
 	float:right;

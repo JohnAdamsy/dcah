@@ -27,13 +27,13 @@ $().ready(function(){
     
     //class specific validation rules
      $.validator.addClassRules({
-        cloned:{
+        cloned1:{
         required: true
     },
     positive:{
-    	positiveNumber:true
+    	positiveNumber1:true
     	},
-    fromZero:{
+    fromZero1:{
     	zeroAndAbove:true
     	}
     });
@@ -43,7 +43,7 @@ $().ready(function(){
     //var form_id='#'+$(".form-container").find('form').attr('id');
    // alert('Found: '+form_id);
 	/*---------------------------------------start of validation to zinc_ors_inventory form------------------------------------------------------------*/
-	$("#zinc_ors_inventory").validate({/*inventory module*/
+	$("#zinc_ors_inventory1").validate({/*inventory module*/
 		rules: {
 			facilityDateOfInventory:{required: true},
 			facilityName:{required: true},
@@ -75,7 +75,7 @@ $().ready(function(){
 	}); /*end of zinc_ors_inventory*/
 	
 	/*---------------------------------------start of validation to form_mnh_assessment form------------------------------------------------------------*/
-	$("#form_mnh_assessment").validate({/*inventory module*/
+	$("#form_mnh_assessment1").validate({/*inventory module*/
 		rules: {
 			facilityDateOfInventory:{required: true},
 			facilityName:{required: true},
