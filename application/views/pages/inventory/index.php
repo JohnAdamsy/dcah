@@ -311,61 +311,62 @@ $mfCode = $this -> session -> userdata('fCode');
 		<!--profile data here -->
 		
 	
-		<!--section class="form-sidebar">
+		
+		<!--div class="form-sidebar">
 				<h3>Actions</h3>
-				<section class="buttons">					
+				<div class="buttons">					
 				<a title="To clear entire form" id="reset_current_form" class="awesome magenta medium">Save</a>
 				<a title="To Save entered info" id="submit_form_data" class="awesome blue medium">Submit</a>
 				<a title="To close the form." id="close_opened_form" class="awesome red medium">Close</a>
-				</section>
-		</section--><!-- End of Form-SideBar -->
+				</div>
+		</div--><!-- End of Form-SideBar -->
 		
-		<section class="current-body">
-			<nav id="pageheader" >
-				<section class="search">
+		<div class="current-body">
+			<div id="pageheader" >
+				<div class="search">
 					<form>
 						<input type="search" placeholder="Search Here" />
 					</form>
-				</section>
-				<section class="links">
+				</div>
+				<div class="links">
 					<ul>
 						<a id="instructions_li" class="current">Instructions</a>
 						<!--a id="inventory_report_li" href="<?php echo base_url().'c_front/reports' ?>">Reports</a-->
 					</ul>
-				</section>
-				<section class="right-side-nav">
+				</div>
+				<div class="right-side-nav">
 
-					<section class="sessionUser"><?php echo 'Facility:	'.$mfName ?></section>
+					<div class="sessionUser"><?php echo 'Facility:	'.$mfName ?></div>
 
-		            <section style="float:right;margin-right:5%"><?php echo anchor(base_url().'c_auth/logout','Logout') ?></section>
+		            <div style="float:right;margin-right:5%"><?php echo anchor(base_url().'c_auth/logout','Logout') ?></div>
 	
-				</section>
-			</nav>
+				</div>
+			</div>
 			
 			
 									
 									
-				<section class="form-container-menu">
+				<div class="form-container-menu">
 					<ul>
 						
-						<li><a id="instructions_li" class="awesome blue large" style="font-size:1em;display:inline-block">Instructions</a></li>
+						<li><a id="instructions_li" class="awesome blue large" style="font-size:1em;display:inline-block;float:left">Instructions</a></li>
 						
 						<!--li><a id="facility_registration_li" class="awesome blue large" style="font-size:1em;display:inline-block">Facility Registration</a></li-->
 
-						<li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Child Health Commodity Assessment</a></li>
+						<li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block;float:left">Child Health Commodity Assessment</a></li>
 
-						<li><a id="mnh_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block">Maternal and New-born Health Assessment</a></li>
+						<li><a id="mnh_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block;float:left">Maternal and New-born Health Assessment</a></li>
 						
 						<!--li><a id="ort_li" class="awesome blue large" style="font-size:1em;display:inline-block">ORT Corner Assessment</a></li-->
 					</ul>
-				</section>					
-				<section class="form-container ui-widget">
+				</div>					
+				<div class="form-container ui-widget">
 					<?php
 
 					echo $form;
 					?>
-				</section><!-- End of Form-Container Section-->							
-			</section>
+				</div><!-- End of Form-Container div-->							
+			</div>
 			<div id="accountSettings" class="reveal-modal">
 				<div>
 					

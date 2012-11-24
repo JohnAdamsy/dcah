@@ -48,7 +48,7 @@ class C_Front extends CI_Controller {
 		<li class="form-link a">
 			MNCH Commodity Assessment Tool Instructions
 		</li>
-		<section class="form-instructions a">
+		<div class="form-instructions a">
 			<ol>
 				<li>
 					Instructions for the User page
@@ -58,7 +58,7 @@ class C_Front extends CI_Controller {
 						Upload the  signed letter by the Head of the two divisions- I will send you a soft copy of this
 					</li>
 					<li>
-						Section the instructions as per the following
+						div the instructions as per the following
 					</li>
 				</ol>
 				<li>
@@ -83,7 +83,7 @@ class C_Front extends CI_Controller {
 						The system will automatically upload the following information:  facility type, level of care, ownership/management, and district, county. If this information is not uploaded automatically, complete with the correct information.
 					</li>
 					<li>
-						Complete the facility-in-charge information section with the following: name, telephone contact & email contact
+						Complete the facility-in-charge information div with the following: name, telephone contact & email contact
 					</li>
 				</ol>
 
@@ -111,11 +111,11 @@ class C_Front extends CI_Controller {
 					</li>
 				</ol>
 			</ol>
-		</section>
+		</div>
 		<li class="form-link c">
 			Child Assessment Form
 		</li>
-		<section class="form-instructions c" >
+		<div class="form-instructions c" >
 			<ol>
 				<li>
 					The assessment will focus on the following:
@@ -133,8 +133,8 @@ class C_Front extends CI_Controller {
 					These are points where children are managed or where the commodities are stored and which might have stocks.
 				</li>
 				<li>
-					Please note you cannot proceed to the next tab, the next section or the next form without fully
-					completing all the section in the 6 tabs.  Where stocks are not available, indicate zero (o) quantities and proceed to the next step.
+					Please note you cannot proceed to the next tab, the next div or the next form without fully
+					completing all the div in the 6 tabs.  Where stocks are not available, indicate zero (o) quantities and proceed to the next step.
 				</li>
 				<li>
 					In the case of the options, there are two possible scenarios (YES or NO).
@@ -160,11 +160,11 @@ class C_Front extends CI_Controller {
 				</ol>
 
 			</ol>
-		</section>
+		</div>
 		<li class="form-link m">
 			Maternal & New-Born Health Assessment
 		</li>
-		<section class="form-instructions m" >
+		<div class="form-instructions m" >
 			<ol>
 				<li>
 					The assessment will focus on the following:
@@ -174,11 +174,11 @@ class C_Front extends CI_Controller {
 						Basic emergency obstetric and new born care commodities, supplies & equipment
 					</li>
 					<li>
-						Some sections of the tool will
+						Some divs of the tool will
 						have a provision for definite answers- YES/NO – these will limit you to choose only one response
 					</li>
 					<li>
-						Some sections in the tool may allow for multiple sections.
+						Some divs in the tool may allow for multiple divs.
 					</li>
 				</ol>
 				<li>
@@ -211,7 +211,7 @@ class C_Front extends CI_Controller {
 				</ol>
 
 			</ol>
-		</section>
+		</div>
 	</ol>
 
 </ol>

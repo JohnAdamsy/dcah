@@ -31,7 +31,7 @@ $().ready(function(){
         required: true
     },
     positive:{
-    	positiveNumber:true
+    	positiveNumber1:true
     	},
     fromZero1:{
     	zeroAndAbove:true
@@ -75,7 +75,7 @@ $().ready(function(){
 	}); /*end of zinc_ors_inventory*/
 	
 	/*---------------------------------------start of validation to form_mnh_assessment form------------------------------------------------------------*/
-	$("#form_mnh_assessment").validate({/*inventory module*/
+	$("#form_mnh_assessment1").validate({/*inventory module*/
 		rules: {
 			facilityDateOfInventory:{required: true},
 			facilityName:{required: true},
