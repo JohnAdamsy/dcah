@@ -1480,7 +1480,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_1" id="equipQuantity_1" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_2">
 					<td width="400"><label>Table spoons </label>
@@ -1495,7 +1495,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_2" id="equipQuantity_2" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_3">
 					<td width="400"><label>Stirring spoon </label>
@@ -1510,7 +1510,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_3" id="equipQuantity_3" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_4">
 					<td width="400"><label>Plastic buckets (with lids for infection prevention) </label>
@@ -1525,7 +1525,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_4" id="equipQuantity_4" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_5">
 					<td width="400"><label> Buckets – for storing cups, spoons </label>
@@ -1540,7 +1540,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_5" id="equipQuantity_5" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_6">
 					<td width="400"><label> Plastic cups (50-100mls) </label>
@@ -1555,7 +1555,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_6" id="equipQuantity_6" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_7">
 					<td width="400"><label> Plastic cups (101-200mls) </label>
@@ -1570,7 +1570,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_7" id="equipQuantity_7" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_8">
 					<td width="400"><label> Plastic cups (201mls-499mls) </label>
@@ -1585,7 +1585,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_8" id="equipQuantity_8" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_9">
 					<td width="400"><label> Plastic cups (500mls) </label>
@@ -1600,7 +1600,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_9" id="equipQuantity_9" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_10">
 					<td width="400"><label> 1 litre Calibrated measuring jars </label>
@@ -1615,7 +1615,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_10" id="equipQuantity_10" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_11">
 					<td width="400"><label> Table Trays </label>
@@ -1630,7 +1630,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_11" id="equipQuantity_11" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_12">
 					<td width="400"><label> Wash Basins </label>
@@ -1645,7 +1645,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_12" id="equipQuantity_12" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_13">
 					<td width="400"><label> Water heating equipment,(e.g..hot plate/Meko ) </label>
@@ -1660,7 +1660,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_13" id="equipQuantity_13" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_14">
 					<td width="400"><label> Hot plate-Electric/Solar powered </label>
@@ -1675,7 +1675,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_14" id="equipQuantity_14" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_15">
 					<td width="400"><label> Heater- Gas powered </label>
@@ -1690,7 +1690,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_15" id="equipQuantity_15" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_16">
 					<td width="400"><label> Charcoal or Firewood  stove/Heater </label>
@@ -1705,7 +1705,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_16" id="equipQuantity_16" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_17">
 					<td width="400"><label> Paraffin Stove/Heater </label>
@@ -1720,7 +1720,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_17" id="equipQuantity_17" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_18">
 					<td width="400"><label> Sufurias  with a Lid (14 inch) </label>
@@ -1735,7 +1735,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_18" id="equipQuantity_18" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_19">
 					<td width="400"><label> Waste Container </label>
@@ -1750,7 +1750,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_19" id="equipQuantity_19" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_20">
 					<td width="400"><label> Wall Clock /Timing device </label>
@@ -1765,7 +1765,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_20" id="equipQuantity_20" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_21">
 					<td width="400"><label> Table- for mixing ORS </label>
@@ -1780,7 +1780,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_21" id="equipQuantity_21" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_22">
 					<td width="400"><label> Benches/chair(s) </label>
@@ -1795,7 +1795,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_22" id="equipQuantity_22" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_23">
 					<td width="400"><label> Water Storage Container ( at least 40lts)- With Tap </label>
@@ -1810,7 +1810,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_23" id="equipQuantity_23" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_24">
 					<td width="400"><label> Water Storage Container ( at least 40lts)- Without Tap </label>
@@ -1825,7 +1825,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_24" id="equipQuantity_24" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_25">
 					<td width="400"><label> Locally available measuring containers e.g. cooking fat Tins. </label>
@@ -1840,7 +1840,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_25" id="equipQuantity_25" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_26">
 					<td width="400"><label> Weighing scale </label>
@@ -1855,7 +1855,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_26" id="equipQuantity_26" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_27">
 					<td width="400"><label> Hand Washing Facility/Point e.g. tippy taps. </label>
@@ -1870,7 +1870,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_27" id="equipQuantity_27" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_28">
 					<td width="400"><label> Safe water source </label>
@@ -1885,7 +1885,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_28" id="equipQuantity_28" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_29">
 					<td width="400"><label> Thermometer </label>
@@ -1900,7 +1900,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_29" id="equipQuantity_29" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<tr class="row2" id="tr_30">
 					<td width="400"><label> MUAC Tape </label>
@@ -1915,7 +1915,7 @@
 					<td width="400">
 					<input type="number"  name="equipQuantity_30" id="equipQuantity_30" class="cloned fromZero" maxlength="6"/>
 					</td>
-					
+
 				</tr>
 				<!--tr class="row2">
 				<input type="button" id="editEquipmentListBottomButton" name="editEquipmentList" class="awesome myblue medium" value="Edit List"/-->
@@ -1934,4 +1934,3 @@
 </form>
 
 <p id="data"></p>
-' 

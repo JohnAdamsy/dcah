@@ -12,12 +12,9 @@ $mfCode = $this -> session -> userdata('fCode');
 		<script href="<?php echo base_url(); ?>js/modernizr-latest.js"></script>
 		<!-- Attach CSS files -->
 		<link rel="stylesheet" href="<?php echo base_url()?>css/styles.css"/>
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		
-		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>		
 		
 		<!-- Attach JavaScript files -->
-
 		<!--script src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script-->
 		<script src="<?php echo base_url()?>js/jquery-1.8.2.min.js" charset="utf-8"></script>
 
@@ -367,13 +364,13 @@ $mfCode = $this -> session -> userdata('fCode');
 				</div>
 				<div class="links">
 					<ul>
-						<a id="instructions_li" class="current">Instructions</a>
+						<!--a id="instructions_li" class="current">Instructions</a>
 						<!--a id="inventory_report_li" href="<?php echo base_url().'c_front/reports' ?>">Reports</a-->
 					</ul>
 				</div>
 				<div class="right-side-nav">
 
-					<div class="sessionUser"><?php echo 'Facility:	'.$mfName ?></div>
+			
 
 		            <div style="float:right;margin-right:5%"><?php echo anchor(base_url().'c_auth/logout','Logout') ?></div>
 	
@@ -384,20 +381,24 @@ $mfCode = $this -> session -> userdata('fCode');
 									
 									
 				<div class="form-container-menu">
-					<ul>
+					<div class="sessionUser msg guide "><?php echo '<li>Facility Code :</li><li style="color:#AA1317">'.$mfCode.'</li>       <li>Facility:	</li><a style="color:#AA1317">'.$mfName.'</li>';?></div><br>		
+					<!--ul>
 						
 						<li><a id="instructions_li" class="awesome blue large" style="font-size:1em;display:inline-block;float:left">Instructions</a></li>
 						
 						<!--li><a id="facility_registration_li" class="awesome blue large" style="font-size:1em;display:inline-block">Facility Registration</a></li-->
 
-						<li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block;float:left">Child Health Commodity Assessment</a></li>
+						<!--li><a id="zinc_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block;float:left">Child Health Commodity Assessment</a></li>
 
 						<li><a id="mnh_inventory_li" class="awesome blue large" style="font-size:1em;display:inline-block;float:left">Maternal and New-born Health Assessment</a></li>
 						
 						<!--li><a id="ort_li" class="awesome blue large" style="font-size:1em;display:inline-block">ORT Corner Assessment</a></li-->
-					</ul>
-				</div>					
+					<!--/ul -->
+					
+				</div>	
+						
 				<div class="form-container ui-widget">
+					
 					<?php
 
 					echo $form;
