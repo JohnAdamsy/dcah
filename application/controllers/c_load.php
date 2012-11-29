@@ -231,8 +231,8 @@ class C_Load extends MY_Controller {
 				</div>
 			</div>
 		</div>
-		<div class="block">
-			<div class="column" style="margin-bottom:30px">
+		<div class="block" style="padding-bottom:20%;">
+			<div class="column">
 				<div class="row-title">
 					MCH Contact
 				</div>

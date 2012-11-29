@@ -1478,9 +1478,7 @@ form input:not([type=submit]), form textarea {
 	display: block;
 	height: auto;
 }
-.block .column:first-child {
-	border-right: 2px solid #999999;
-}
+
 .block .column select, .block .column input {
 	width: 90%;
 }
@@ -1494,7 +1492,7 @@ td input[type=number] {
 	width: 24%;
 }
 .column {
-	width: 47.5%;
+	width: 40%;
 	padding-bottom: 2%;
 	display: inline-block;
 	position: relative;
