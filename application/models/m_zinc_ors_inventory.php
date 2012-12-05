@@ -92,6 +92,16 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 					
 					break;
 					
+				  case 'childhealth_pharm_tab':
+					if($this->addUnitCommoditiesInfo()==true){//defined in this model
+                   	
+				     	return $this -> response = 'true';
+                   }else{
+                   	return $this -> response = 'false';
+                   }
+					
+					break;
+				 
 				 case 'childhealth_store_tab':
 					if($this->addUnitCommoditiesInfo()==true){//defined in this model
                    	
@@ -126,7 +136,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
                    }else{
                    	return $this -> response = 'false';
                    }
-					break;*/
+					break;
 				 case 'ort_part2a':
 					 
 					 if($this->addEquipmentAssessmentInfo()==true){//defined in this model
@@ -141,7 +151,9 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 				     	return $this -> response = 'true';
                    }else{
                    	return $this -> response = 'false';
-                   }
+				     break;
+                   }*/
+				 case '':
 					break;
 
 			}
@@ -542,7 +554,17 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 
 	private function addUnitCommoditiesInfo(){
 
-		 $count=$finalCount=1;
+		 $count=$finalCount=1;$lastColumn='';
+		 //source of the request--to be used to set the unit name of the Unit "Other" as provided by the user
+		  $source=$this->input->post('step_name',TRUE);
+		  
+		   /*end of 1 record is marked by either the Expiry Date or StockComments field, so check if the StockComments exists to use it */
+		   if($source=='childhealth_other_tab' || $source=='childhealth_pharm_tab' || $source=='childhealth_store_tab'){
+					$lastColumn='StockComments';
+				  }else{
+				  	$lastColumn='StockExpiryDate';
+				  }
+				  
 		foreach ($this -> input -> post() as $key => $val) {//For every posted values
 		    if(strpos($key,'step_n')===FALSE){//select what we want for the array only
 			   //we separate the attribute name from the number
@@ -556,8 +578,9 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
                   
 				  $this->attr = substr($this->frags[0],1,strlen($this->frags[0]));//the attribute name
 
+				
 				  //mark the end of 1 row...for record count
-				if($this->attr=="StockExpiryDate"){
+				if($this->attr==$lastColumn){
 					//print 'count at:'.$count.'<br />';
 					$finalCount=$count;
 					 $count++;
@@ -585,6 +608,8 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 
 		  //get the record count that will control the number of inserts to be done        
 		  $this->noOfInsertsBatch=$finalCount;
+		  
+		  
 
 
 		for($i=1; $i<=$this->noOfInsertsBatch;++$i){
@@ -608,7 +633,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 					$this -> theForm -> setUpdatedAt(new DateTime()); /*timestamp option*/	
 					}catch(exception $ex){
 						//ignore
-						//die($ex->getMessage());
+						die($ex->getMessage());
 						return false;
 					}
 					
@@ -622,7 +647,9 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 				$this -> theForm -> setStockExpiryDate($this->elements[$i]['StockExpiryDate']);
 				
 				$this -> theForm -> setStockCommodityType($this->elements[$i]['CommodityName']);
-				$this -> theForm -> setPlaceFound($this->elements[$i]['Unit']);
+				
+				($source=!'childhealth_other_tab')?$this -> theForm -> setPlaceFound($this->elements[$i]['Unit']):$this -> theForm -> setPlaceFound($this->input->post('step_notherUnit',TRUE));
+				
 				$this -> em -> persist($this -> theForm);
 				
 
@@ -635,7 +662,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 				$this->em->clear(); //detaches all objects from doctrine
 				//return true;
 				}catch(Exception $ex){
-				  // die($ex->getMessage());
+				  die($ex->getMessage());
 					//display user friendly message
 					return false;
 
@@ -650,7 +677,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 				$this->em->clear(); //detactes all objects from doctrine
 				//return true;
 				}catch(Exception $ex){
-					//die($ex->getMessage());
+					die($ex->getMessage());
 					return false;
 					//display user friendly message/
 

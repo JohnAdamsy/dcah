@@ -457,29 +457,54 @@ $mfCode = $this -> session -> userdata('fCode');
 										var newid = Number(clonecount) + 1;
 										
 										//Id of the new clone
-								$('#clonetrigger_13,#clonetrigger_14,#clonetrigger_15,#clonetrigger_16').click(function() {
-										//alert($(this).attr('id'));
+								$('#clonetrigger_13,#clonetrigger_14,#clonetrigger_15,#clonetrigger_16,#clonetrigger_17,#clonetrigger_18,#clonetrigger_19,#clonetrigger_20').click(function() {
+										
 										if($(this).attr('id')=="clonetrigger_13"){
 											c_target='#formbuttons_13';
-											yourclass = ".clonable.zinc";
+											yourclass = ".clonable.zinc.pharm";
 											clonecount = $(yourclass).length;
 											newid = Number(clonecount) + 1;
+											//alert(clonecount );
 											//alert('1');
 										}else if($(this).attr('id')=="clonetrigger_14"){
 											c_target='#formbuttons_14';
-											yourclass = ".clonable.ors";
+											yourclass = ".clonable.ors.pharm";
 											clonecount = $(yourclass).length;
 											newid = Number(clonecount) + 1;
 											//alert('2');
 										}else if($(this).attr('id')=="clonetrigger_15"){
 											c_target='#formbuttons_15';
-											yourclass = ".clonable.cip";
+											yourclass = ".clonable.cip.pharm";
 											clonecount = $(yourclass).length;
 											newid = Number(clonecount) + 1;
 											//alert('2');
 										}else if($(this).attr('id')=="clonetrigger_16"){
 											c_target='#formbuttons_16';
-											yourclass = ".clonable.met";
+											yourclass = ".clonable.met.pharm";
+											clonecount = $(yourclass).length;
+											newid = Number(clonecount) + 1;
+											//alert('2');
+										}else if($(this).attr('id')=="clonetrigger_17"){
+											c_target='#formbuttons_17';
+											yourclass = ".clonable.ors.sto";
+											clonecount = $(yourclass).length;
+											newid = Number(clonecount) + 1;
+											//alert('2');
+										}else if($(this).attr('id')=="clonetrigger_18"){
+											c_target='#formbuttons_18';
+											yourclass = ".clonable.cip.sto";
+											clonecount = $(yourclass).length;
+											newid = Number(clonecount) + 1;
+											//alert('2');
+										}else if($(this).attr('id')=="clonetrigger_19"){
+											c_target='#formbuttons_19';
+											yourclass = ".clonable.met.sto";
+											clonecount = $(yourclass).length;
+											newid = Number(clonecount) + 1;
+											//alert('2');
+										}else if($(this).attr('id')=="clonetrigger_20"){
+											c_target='#formbuttons_20';
+											yourclass = ".clonable.met.sto";
 											clonecount = $(yourclass).length;
 											newid = Number(clonecount) + 1;
 											//alert('2');
@@ -489,7 +514,7 @@ $mfCode = $this -> session -> userdata('fCode');
 											newid_ : newid, //Id of the new clone, (you can pass your own if you want)
 											target_ : $(c_target), //where do we insert the clone? (target element)
 											insert_ : "before", //where do we insert the clone? (after/before/append/prepend...)
-											limit_ : 0							//Maximum Number of Clones
+											limit_ : 0			//Maximum Number of Clones
 										});
 										
 										
@@ -514,25 +539,41 @@ $mfCode = $this -> session -> userdata('fCode');
 				/*----------------------------------------------------------------------------------------------------------------*/
 				/*----------------------------------------------------------------------------------------------------------------*/
 									/*start of clone_remove*/
-									$('#cloneremove_13,#cloneremove_14,#cloneremove_15,#cloneremove_16').click(function() {
+									$('#cloneremove_13,#cloneremove_14,#cloneremove_15,#cloneremove_16,#cloneremove_17,#cloneremove_18,#cloneremove_19,#cloneremove_20').click(function() {
 										//alert($(".clonable").find("tr:last").attr('name'));
 									
 											if($(this).attr('id')=='cloneremove_13'){
-												if($(".clonable.zinc").length>1)
+												if($(".clonable.zinc.pharm").length>1)
 												//alert('1');
-												$(".clonable.zinc:last").after().remove();
+												$(".clonable.zinc.pharm:last").after().remove();
 											}else if($(this).attr('id')=='cloneremove_14'){
 												//alert($(".clonable.ors").length);
-												if($(".clonable.ors").length>1)
-												$(".clonable.ors:last").after().remove();
+												if($(".clonable.ors.pharm").length>1)
+												$(".clonable.ors.pharm:last").after().remove();
 											}else if($(this).attr('id')=='cloneremove_15'){
 												//alert($(".clonable.ors").length);
-												if($(".clonable.cip").length>1)
-												$(".clonable.cip:last").after().remove();
+												if($(".clonable.cip.pharm").length>1)
+												$(".clonable.cip.pharm:last").after().remove();
 											}else if($(this).attr('id')=='cloneremove_16'){
 												//alert($(".clonable.ors").length);
-												if($(".clonable.met").length>1)
-												$(".clonable.met:last").after().remove();
+												if($(".clonable.met.pharm").length>1)
+												$(".clonable.met.pharm:last").after().remove();
+											}else if($(this).attr('id')=='cloneremove_17'){
+												//alert($(".clonable.ors").length);
+												if($(".clonable.ors.sto").length>1)
+												$(".clonable.ors.sto:last").after().remove();
+											}else if($(this).attr('id')=='cloneremove_18'){
+												//alert($(".clonable.ors").length);
+												if($(".clonable.cip.sto").length>1)
+												$(".clonable.cip.sto:last").after().remove();
+											}else if($(this).attr('id')=='cloneremove_19'){
+												//alert($(".clonable.ors").length);
+												if($(".clonable.met.sto").length>1)
+												$(".clonable.met.sto:last").after().remove();
+											}else if($(this).attr('id')=='cloneremove_20'){
+												//alert($(".clonable.ors").length);
+												if($(".clonable.met.sto").length>1)
+												$(".clonable.met.sto:last").after().remove();
 											}
 										
 									 return false;
