@@ -64,7 +64,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
                    	return $this -> response = 'false';
                    }
 					break;
-				case 'childhealth_mch_tab':
+				/*case 'childhealth_mch_tab':
 					 if($this->addUnitCommoditiesInfo()==true){//defined in this model
                    	
 				     	return $this -> response = 'true';
@@ -554,7 +554,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 
 	private function addUnitCommoditiesInfo(){
 
-		 $count=$finalCount=1;$lastColumn='';
+		 $count=$finalCount=1;$lastColumn='';$unitName='';
 		 //source of the request--to be used to set the unit name of the Unit "Other" as provided by the user
 		  $source=$this->input->post('step_name',TRUE);
 		  
@@ -576,7 +576,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 				$this->id = $count;  // the id
 
                   
-				  $this->attr = substr($this->frags[0],1,strlen($this->frags[0]));//the attribute name
+				  $this->attr = substr($this->frags[0],2,strlen($this->frags[0]));//the attribute name
 
 				
 				  //mark the end of 1 row...for record count
@@ -627,7 +627,29 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 			   $this -> theForm -> setStockFacility($this -> session -> userdata('fCode')); /*timestamp option*/
 				}else{
 				//die('Duplicate entry, so update');
-				try{
+				
+					/*branch by source, e.g from store, search by facility code, unit & batch no*/
+					if($source=='childhealth_other_tab' || $source=='childhealth_pharm_tab' || $source=='childhealth_store_tab'){
+						/*unit name isn't in the elemen-value array for the other's unit, so a hack to fix the mismatch*/
+						if($source=='childhealth_other_tab'){
+							$unitName=$this->input->post('step_notherUnit',TRUE);
+						}else{
+						    $unitName=$this->elements[$i]['Unit'];
+						}
+						
+					try{
+					$this -> theForm=$this->em->getRepository('models\Entities\e_stock')
+					                       ->findOneBy( array('stockFacility'=>$this -> session -> userdata('fCode'),'stockBatchNo'=>$this->elements[$i]['StockBatchNo'],
+					                       'placeFound'=>$unitName,'stockCommodityType'=>$this->elements[$i]['CommodityName']));
+					/*if found, update else create a new assuming the batchNo has been modified*/
+					$this -> theForm -> setUpdatedAt(new DateTime()); /*timestamp option*/	
+					}catch(exception $ex){
+						//ignore
+						die($ex->getMessage());
+						return false;
+					}
+				}else{//branch to the 1st three sources
+					try{
 					$this -> theForm=$this->em->getRepository('models\Entities\e_stock')
 					                       ->findOneBy( array('stockFacility'=>$this -> session -> userdata('fCode'),'placeFound'=>$this->elements[$i]['Unit'],'stockCommodityType'=>$this->elements[$i]['CommodityName']));
 					$this -> theForm -> setUpdatedAt(new DateTime()); /*timestamp option*/	
@@ -636,6 +658,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 						die($ex->getMessage());
 						return false;
 					}
+				}
 					
 				}
 				
@@ -648,7 +671,7 @@ class M_Zinc_Ors_Inventory  extends MY_Model {
 				
 				$this -> theForm -> setStockCommodityType($this->elements[$i]['CommodityName']);
 				
-				($source=!'childhealth_other_tab')?$this -> theForm -> setPlaceFound($this->elements[$i]['Unit']):$this -> theForm -> setPlaceFound($this->input->post('step_notherUnit',TRUE));
+				($source!='childhealth_other_tab')?$this -> theForm -> setPlaceFound($this->elements[$i]['Unit']):$this -> theForm -> setPlaceFound($this->input->post('step_notherUnit',TRUE));
 				
 				$this -> em -> persist($this -> theForm);
 				
